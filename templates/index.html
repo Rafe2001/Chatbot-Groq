@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat App by Groq</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .container {
+            margin-top: 50px;
+        }
+        /* Increase font size */
+        label, textarea, .form-control {
+            font-size: 20px; /* Adjust the font size as needed */
+        }
+        /* Show slider value */
+        #sliderValue {
+            font-size: 18px; /* Adjust the font size as needed */
+        }
+        .btn-custom {
+            font-size: 20px;
+            background-color: wheat;
+            color: black;
+            border: 2px solid silver;
+        }
+    </style>
+    <script>
+        function updateSliderValue() {
+            var slider = document.getElementById("memory_length");
+            var output = document.getElementById("sliderValue");
+            output.innerHTML = slider.value;
+            slider.oninput = function() {
+                output.innerHTML = this.value;
+            }
+        }
+        window.onload = updateSliderValue;
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Chat App by Groq</h1>
+        <form action="/chat" method="post">
+            <div class="form-group">
+                <label for="user_question">Ask a question:</label>
+                <textarea class="form-control" id="user_question" name="user_question" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="model_name">Choose a model:</label>
+                <select class="form-control" id="model_name" name="model_name">
+                    <option value="mixtral-8x7b-32768">mixtral-8x7b-32768</option>
+                    <option value="llama3-70b-8192">llama3-70b-8192</option>
+                    <option value="llama3-8b-8192">llama3-8b-8192</option>
+                    <option value="gemma-7b-it">gemma-7b-it</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="memory_length">Conversational Memory Length:</label>
+                <!-- Show slider value -->
+                <span id="sliderValue">5</span>
+                <input type="range" class="form-control-range" id="memory_length" name="memory_length" min="1" max="10" value="5">
+            </div>
+            <button type="submit" class="btn btn-primary btn-custom">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
