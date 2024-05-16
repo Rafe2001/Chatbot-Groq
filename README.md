@@ -2,6 +2,11 @@
 
 The Groq Chatbot is an interactive conversational agent powered by the Groq API, designed to provide responses to user queries in natural language. This chatbot leverages state-of-the-art language models to generate contextually relevant responses based on the input provided by the user.
 
+![image](https://github.com/Rafe2001/Chatbot-Groq/assets/108533597/bd1f8dcd-5b44-4099-8ed1-d7230f233aea)
+![image](https://github.com/Rafe2001/Chatbot-Groq/assets/108533597/ecd3bb0d-5ab8-49ea-b501-27169f865e8a)
+![image](https://github.com/Rafe2001/Chatbot-Groq/assets/108533597/d517d2f4-5eb0-4589-8263-05f65a2f4ea8)
+
+
 ## Features
 
 - Interactive chat interface: Users can interact with the chatbot through a simple web interface.
